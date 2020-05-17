@@ -34,6 +34,7 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
                 return done(null, false);
             }
         });
-    }));
+    }
+));
 
 exports.verifyUser = passport.authenticate('jwt', {session: false});
